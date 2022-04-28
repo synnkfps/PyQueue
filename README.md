@@ -28,7 +28,7 @@ Queue(list, length, input).infos() # or .info()
 
 
 ```mermaid
-graph  TD
+flowchart TD
 
 A[Read the input]  -->|Verify if the size is less than the wanted|  B(Insert string on the first position)
 
