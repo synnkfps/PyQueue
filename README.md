@@ -1,6 +1,6 @@
+
 ##### PyQueue
 ##### A simple module lib to queue your lists!
-
 **_Usage:_**
 -
 ```py
@@ -25,8 +25,18 @@ Queue(list, length, input).infos() # or .info()
 -
 - Insert the wanted string onto the list if the maximum size of the list is less than the wanted size.
 - If the size of the list is greater than the wanted size, pop out the last queue element and insert the wanted string.
-
-
+---
+### _TODO_:
+- [ ] Add `.create()` function
+	- will create 2 buffers for temporary usage.
+	- e.g: `Queue(q, 3, in).create(1)`
+		- creates a new buffer **inside** the **`Queue`** _class_ itself
+		- can use `.input()`, `.output()` and `.infos()`
+		- cannot be referenced outside the **`Queue`** _class_.
+- [ ] Double-Reference `return` Methods
+	- allows the user to reference `Queue` without needing to `print()` it. 
+		- also allows the user to reference `Queue` with `print()`.
+---
 ```mermaid
 graph TD
     A[Read the input] -->|Verify if the size is less than the wanted|B(Insert string on the first position)
