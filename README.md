@@ -28,19 +28,17 @@ Queue(list, length, input).infos() # or .info()
 
 
 ```mermaid
-flowchart TD
-
-A[Read the input]  -->|Verify if the size is less than the wanted|  B(Insert string on the first position)
-
-B  -->  C{Check the queue}
-C  -->|If the size is lass|  D[Insert at 0 and move the rest]
-C  -->|If size is greater|  E[Insert at 0 and pop the last]
-E  -->  F
-D  -->  F
-F{Rest of args}
-F  -->  |.input|  H(print the new element)
-F  -->  |.output|  G(print the removed element)
-F  -->  |info / infos|  I(print the queue, the input and the output)
+graph TD
+    A[Read the input] -->|Verify if the size is less than the wanted|B(Insert string on the first position)
+    B --> C{Check the queue}
+    C -->|If the size is lass|D[Insert at 0 and move the rest]
+    C -->|If size is greater|E[Insert at 0 and pop the last]
+    E --> F
+    D --> F
+    F{Rest of args}
+    F --> |.input|H(print the new element)
+    F --> |.output|G(print the removed element)
+    F --> |info / infos|I(print the queue, the input and the output)
 ```
 
 
